@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | Bright World</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Forum&family=Patrick+Hand&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "Forum", serif;
+            font-weight: 400;
+            font-style: normal;
+            color: rgb(0, 0, 0);
+            margin: 0;
+            padding: 0;
+            background-color: rgb(236, 224, 171);
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        /* img.css */
+        .questions{
+            height: 50%;
+            width: 100%;
+            top: 50px;
+            
+        }
+        .questions a{
+            text-decoration: none;
+            color: black;
+        }
+        .questions a:hover{
+            border-bottom: 1px solid black;
+            transition: 0.4 ease;
+        }
+
+
+        .kchbhi {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /* form.css */
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 40px 20px;
+            background: none;
+            /* background now on body */
+        }
+
+        .contact-form,
+        .contact-info {
+            flex: 1 1 400px;
+            /* shrink/grow basis */
+            max-width: 800px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .contact-form,
+            .contact-info {
+                max-width: 100%;
+            }
+        }
+
+        .contact-form {
+            margin-left: 100px;
+            min-width: 300px;
+            background: rgb(59, 59, 26);
+            padding: 30px;
+            border-radius: 12px;
+            color: #ffffff;
+            border: 1px solid rgb(59, 59, 26);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        /* Glow only on hover */
+        .contact-form:hover {
+            box-shadow:
+                0 0 15px rgb(170, 170, 90),
+                0 0 30px rgb(150, 150, 60),
+                0 0 45px rgb(130, 130, 40);
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px 5px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            border: 1px solid rgb(109, 109, 57);
+            box-shadow: 0 0 8px rgb(170, 170, 90);
+            background-color: rgb(130, 130, 40);
+            color: white;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: rgb(236, 224, 171);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.5s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: rgb(59, 59, 26);
+            color: white;
+            border: 1px solid white;
+        }
+
+        /* info.css */
+
+        .contact-info {
+            margin: auto;
+            min-width: 250px;
+            background: rgb(59, 59, 26);
+            /* semi-transparent dark blue */
+            padding: 25px;
+            border-radius: 12px;
+            color: #ffffff;
+            border: 1px solid rgb(109, 109, 57);
+            /* optional neon border */
+
+        }
+
+        .contact-info:hover {
+            box-shadow:
+                0 0 15px rgb(170, 170, 90),
+                0 0 30px rgb(150, 150, 60),
+                0 0 45px rgb(130, 130, 40);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #00b894;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Have questions about our LED lights or need support? Fill out the form or reach out directly.</p>
+
+        <div class="kchbhi">
+            <div class="questions">
+                <h1>Do you have a question?</h1>
+                <p>
+                    <h3>For general enquiries:</h3>
+                    Please complete the form or email <a href="">sales@lightsandlamps.com</a> directly. <br>
+                    <br>
+                    <h3>For returns enquiries:</h3>
+                    Please email <a href="">returns@lightsandlamps.com</a>. Please include your full name and order number. <br>
+                    <br>
+                    <h3>For all trade enquiries:</h3>
+                    For trade specific questions, please visit our <a href="">trade</a> page or email us on <a href="">trade@lightsandlamps.com</a>
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+
+                <!-- Contact Form -->
+                <form class="contact-form" action="submit_form.php" method="POST">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="inquiry">Type of Inquiry</label>
+                    <select id="inquiry" name="inquiry">
+                        <option>General Question</option>
+                        <option>Product Inquiry</option>
+                        <option>Bulk/Wholesale</option>
+                        <option>Technical Support</option>
+                    </select>
+
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+               
+                </div>
+
+            </div>
+        </div>
+    </div>
+     <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Reach Us Directly</h2>
+                    <p><strong>📍 Address:</strong> 123 LightWay Ave, Los Angeles, CA</p>
+                    <p><strong>📞 Phone:</strong> <a href="tel:+11234567890">(123) 456-7890</a></p>
+                    <p><strong>✉️ Email:</strong> <a href="mailto:support@yourledbrand.com">brightworld@gmail.com</a>
+                    </p>
+                    <p><strong>🕒 Hours:</strong> Mon–Fri, 9AM–6PM (EST)</p>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> </a>
+                        <a href="#">🔗</a>
+                    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
